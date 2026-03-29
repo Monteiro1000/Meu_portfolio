@@ -28,12 +28,12 @@
  }
 
  body.escuro {
-  --fundo-principal: #222222 ;
-  --texto: #e0e0e0;
-  --texto-inverso: #333333;
-  --destaque: #ff5522;
-  --destaque-inverso: #a73917 ;
-  --fundo-card: #444444 ;
+  --fundo-principal: #0c0c0c ;
+  --texto: #ffffff;
+  --texto-inverso: #e7e7e7;
+  --destaque: #4b0574;
+  --destaque-inverso: #5a17a7 ;
+  --fundo-card: #000000 ;
  }
 
  header {
