@@ -4,167 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio profissional de Júlio Monteiro, desenvolvedor front-end e estudante de Ciência da Computação.">
-    <title>Júlio Monteiro — Portfólio</title>
+    <title>Portfólio Júlio Monteiro</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <script src="https://kit.fontawesome.com/6b1def395a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="site-header">
-        <nav>
-            <a href="#top" class="brand">JÚLIO MONTEIRO</a>
-            <div id="menu">
-                <a href="#sobre" class="link">Sobre</a>
-                <a href="#work" class="link">Projetos</a>
-                <a href="#skills" class="link">Skills</a>
-                <a href="#contato" class="link">Contato</a>
-                <a href="#" class="link" id="botao-tema" aria-label="Alternar tema"><i class="fa-solid fa-moon"></i></a>
-            </div>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#sobre" class="link">Sobre</a></li>
+                <li><a href="#skills" class="link">Skills</a></li>
+                <li><a href="#formacao" class="link">Formação</a></li>
+                <li><a href="#projetos" class="link">Projetos</a></li>
+                <li><a href="#contato" class="link">Contato</a></li>
+                <li><a href="#" class="link" id="botao-tema" aria-label="Alternar tema"><i class="fa-solid fa-moon"></i></a></li>
+            </ul>
         </nav>
     </header>
 
-    <main id="top">
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">Desenvolvedor Front-end • Estudante de Ciência da Computação</p>
-                <h1>Transformo ideias em experiências digitais claras, modernas e com propósito.</h1>
-                <p class="intro">Sou Júlio Monteiro, estudante da UFS, com foco em desenvolvimento front-end, interfaces e produtos digitais que unem tecnologia, usabilidade e impacto real.</p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">Ver projetos</a>
-                    <a href="https://www.linkedin.com/in/júlio-monteiro-298745304/" target="_blank" class="btn btn-secondary">Conectar no LinkedIn</a>
+    <main>
+        <section id="ficha" class="hero">
+            <div class="hero__image">
+                <img src="imagens/monteiro-perfil.png.jpeg" alt="Monteiro perfil" class="foto">
+            </div>
+            <div class="hero__content">
+                <p class="eyebrow">Desenvolvedor Front-end • Engenharia de Software em formação</p>
+                <h1>Júlio Monteiro</h1>
+                <p class="lead">Sou estudante de Ciência da Computação na UFS e desenvolvedor front-end com foco em criar interfaces modernas, acessíveis e com propósito. Trabalho em projetos tecnológicos que unem design, usabilidade e impacto real, com experiência em desenvolvimento web e soluções voltadas para transformação digital.</p>
+                <div class="hero__badges">
+                    <span>UI/UX</span>
+                    <span>Front-end</span>
+                    <span>Projetos com impacto</span>
+                    <span>Inovação</span>
                 </div>
-                <div class="social-links">
+                <div class="hero__actions">
+                    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+                    <a href="#contato" class="btn btn-secondary">Vamos conversar</a>
+                </div>
+
+                <div id="social">
                     <a href="https://www.linkedin.com/in/júlio-monteiro-298745304/" target="_blank" rel="nofollow" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/Monteiro1000" target="_blank" rel="nofollow" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.youtube.com/@juliomonteiro48" target="_blank" rel="nofollow" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     <a href="https://www.instagram.com/juliomonteiro01_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="nofollow" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-visual" aria-hidden="true">
-                <div class="hero-card">
-                    <img src="imagens/monteiro-perfil.png.jpeg" alt="Foto de Júlio Monteiro" class="profile-photo">
-                    <div class="hero-badge">Disponível para projetos</div>
-                    <div class="mini-illustration">
-                        <svg viewBox="0 0 220 140" role="img" aria-label="Ilustração abstrata">
-                            <rect x="16" y="20" width="80" height="80" rx="20" fill="#2563eb" opacity="0.14"></rect>
-                            <rect x="112" y="18" width="92" height="92" rx="30" fill="#7c3aed" opacity="0.16"></rect>
-                            <circle cx="58" cy="66" r="28" fill="#2563eb" opacity="0.35"></circle>
-                            <path d="M36 102c20-10 44-12 74-4 20 5 30 11 48 10" stroke="#7c3aed" stroke-width="4" fill="none" stroke-linecap="round"></path>
-                        </svg>
+        <section id="detalhes">
+            <article id="sobre">
+                <div class="section-heading">
+                    <p class="eyebrow">Sobre mim</p>
+                    <h2><i class="fa-solid fa-handshake"></i> Apresentação</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="text-block">
+                        <p>Atuo com desenvolvimento web e softwares, design de interfaces e construção de projetos que traduzem ideias em experiências claras e funcionais.</p>
+                        <p>Desde o ensino médio, venho desenvolvendo projetos tecnológicos, participando de feiras científicas e consolidando uma presença forte no ecossistema de inovação e educação.</p>
+                    </div>
+                    <div class="info-card">
+                        <p><strong>Foco atual:</strong> criar soluções web com bom design, boa experiência de uso e forte propósito.</p>
+                        <p><strong>Interesses:</strong> desenvolvimento front-end, UX/UI, tecnologia aplicada à educação e projetos sociais.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <section id="sobre" class="section">
-            <p class="section-label">Sobre</p>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h2>Uma abordagem prática, visual e voltada para o usuário</h2>
-                    <p>Atuo com desenvolvimento web, criação de interfaces e soluções digitais que traduzem ideias em experiências claras, elegantes e funcionais.</p>
-                    <p>Ao longo da minha trajetória, participei de projetos acadêmicos e institucionais, desenvolvi produtos com foco em comunicação visual e busco continuar evoluindo em front-end, UX/UI e tecnologia aplicada à educação.</p>
+            <article id="servicos">
+                <div class="section-heading">
+                    <p class="eyebrow">Áreas de atuação</p>
+                    <h2><i class="fa-solid fa-rocket"></i> O que posso entregar</h2>
                 </div>
-                <div class="about-card accent-card">
-                    <div class="pills">
-                        <span class="pill">HTML</span>
-                        <span class="pill">CSS</span>
-                        <span class="pill">JavaScript</span>
-                        <span class="pill">React</span>
-                        <span class="pill">Python</span>
-                        <span class="pill">UX/UI</span>
+                <div class="cards-grid">
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-laptop-code"></i> Desenvolvimento Front-end</h3>
+                        <p>Criação de interfaces responsivas, modernas e otimizadas para experiência do usuário.</p>
                     </div>
-                    <div class="illustration-panel">
-                        <svg viewBox="0 0 220 140" role="img" aria-label="Ilustração de foco digital">
-                            <rect x="20" y="28" width="180" height="84" rx="24" fill="none" stroke="#2563eb" stroke-width="2"></rect>
-                            <rect x="42" y="46" width="62" height="14" rx="7" fill="#2563eb" opacity="0.3"></rect>
-                            <rect x="42" y="70" width="104" height="10" rx="5" fill="#7c3aed" opacity="0.23"></rect>
-                            <circle cx="164" cy="72" r="22" fill="#7c3aed" opacity="0.2"></circle>
-                            <path d="M154 72l8 8 16-18" stroke="#7c3aed" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-palette"></i> UX/UI com foco em clareza</h3>
+                        <p>Design visual consistente, navegação intuitiva e comunicação estratégica de conteúdo.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-people-group"></i> Soluções e projetos com impacto</h3>
+                        <p>Construção de projetos que unem tecnologia, educação, cultura e transformação social.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <section id="work" class="section">
-            <p class="section-label">Projetos</p>
-            <div class="project-list">
-                <article class="project-card">
-                    <div class="project-media">
-                        <img src="imagens/projeto-02-cordel.jpg" alt="Projeto Cordel">
-                    </div>
-                    <div class="project-copy">
-                        <p class="meta">2024 — Web experience</p>
-                        <h3>Projeto Cordel</h3>
-                        <p>Site criado para explorar efeito parallax e destacar a cultura nordestina com uma experiência visual envolvente.</p>
-                        <a href="https://monteiro1000.github.io/projeto-cordel/" target="_blank" class="text-link">Abrir projeto ↗</a>
-                    </div>
-                </article>
+            <article id="skills">
+                <div class="section-heading">
+                    <p class="eyebrow">Competências</p>
+                    <h2><i class="fa-solid fa-brain"></i> Minhas skills</h2>
+                </div>
 
-                <article class="project-card">
-                    <div class="project-media">
-                        <img src="imagens/salvando-a-terra-com-tecnologia-artificial 2.png" alt="Projeto Arborização Inteligente">
+                <div id="skill-container">
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> HTML5</span>
+                            <span class="porcent">90%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 90%;"></div></div>
                     </div>
-                    <div class="project-copy">
-                        <p class="meta">2025 — Produto com impacto</p>
-                        <h3>Arborização Inteligente</h3>
-                        <p>Aplicação voltada para conscientização ambiental, denúncia e mobilização em torno de questões urbanas e ecológicas.</p>
-                        <a href="https://arborizacaointeligenteport-csdn.vercel.app/" target="_blank" class="text-link">Abrir projeto ↗</a>
-                    </div>
-                </article>
 
-                <article class="project-card">
-                    <div class="project-media">
-                        <img src="imagens/design_sertao_na_arte.png" alt="Projeto Sertão na Arte">
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> CSS3</span>
+                            <span class="porcent">85%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 85%;"></div></div>
                     </div>
-                    <div class="project-copy">
-                        <p class="meta">2026 — Plataforma cultural</p>
-                        <h3>Sertão na Arte</h3>
-                        <p>Website desenvolvido para fortalecer a comunicação digital de uma associação cultural com foco em eventos e divulgação artística.</p>
-                        <a href="https://sertaonaarte.com.br" target="_blank" class="text-link">Abrir projeto ↗</a>
-                    </div>
-                </article>
 
-                <article class="project-card">
-                    <div class="project-media">
-                        <img src="imagens/1cae504c7314bec6020c34f9826af02c.png" alt="Projeto Lidera Nordeste">
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> JavaScript</span>
+                            <span class="porcent">75%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 75%;"></div></div>
                     </div>
-                    <div class="project-copy">
-                        <p class="meta">2026 — Website institucional</p>
-                        <h3>Lidera Nordeste</h3>
-                        <p>Projeto de comunicação e apresentação institucional voltado a conectar oportunidades acadêmicas e potencializar jovens da região Nordeste.</p>
-                        <a href="https://lidera-nord.vercel.app" target="_blank" class="text-link">Abrir projeto ↗</a>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-code"></i> React</span>
+                            <span class="porcent">75%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 75%;"></div></div>
                     </div>
-                </article>
-            </div>
-        </section>
 
-        <section id="skills" class="section">
-            <p class="section-label">Skills</p>
-            <div class="skills-grid">
-                <div class="skill-card"><strong>HTML5</strong><span>Estrutura e semântica</span></div>
-                <div class="skill-card"><strong>CSS3</strong><span>Layouts e estilos</span></div>
-                <div class="skill-card"><strong>JavaScript</strong><span>Interatividade</span></div>
-                <div class="skill-card"><strong>React</strong><span>Interfaces modernas</span></div>
-                <div class="skill-card"><strong>Python</strong><span>Automação e lógica</span></div>
-                <div class="skill-card"><strong>UX/UI</strong><span>Design centrado no usuário</span></div>
-            </div>
-        </section>
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="porcent">70%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 70%;"></div></div>
+                    </div>
 
-        <section id="contato" class="section contact">
-            <p class="section-label">Contato</p>
-            <h2>Vamos construir algo relevante.</h2>
-            <p>Estou aberto a colaborações, estágios, oportunidades de desenvolvimento web e projetos com impacto real.</p>
-            <div class="hero-actions">
-                <a href="https://www.linkedin.com/in/júlio-monteiro-298745304/" target="_blank" class="btn btn-primary">Conectar</a>
-                <a href="https://github.com/Monteiro1000" target="_blank" class="btn btn-secondary">GitHub</a>
-            </div>
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-database"></i> SQLite</span>
+                            <span class="porcent">60%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 60%;"></div></div>
+                    </div>
+
+                    <div class="item">
+                        <div class="info">
+                            <span class="nome"><i class="fa-solid fa-people-group"></i> Comunicação</span>
+                            <span class="porcent">100%</span>
+                        </div>
+                        <div class="barra"><div class="progresso" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="formacao">
+                <div class="section-heading">
+                    <p class="eyebrow">Formação</p>
+                    <h2><i class="fa-solid fa-graduation-cap"></i> Trajetória acadêmica</h2>
+                </div>
+
+                <div id="formacao-container">
+                    <div class="curso">
+                        <p class="periodo">2024</p>
+                        <h3 class="instituicao">Senac</h3>
+                        <p class="titulacao">Marketing em mídias sociais</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2023 - 2025</p>
+                        <h3 class="instituicao">Centro de Excelência Manoel Messias Feitosa</h3>
+                        <p class="titulacao">Ensino médio</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2025 - 2026</p>
+                        <h3 class="instituicao">Senac</h3>
+                        <p class="titulacao">Técnico em tecnologia da informação</p>
+                    </div>
+
+                    <div class="curso">
+                        <p class="periodo">2026 - 2031</p>
+                        <h3 class="instituicao">UFS</h3>
+                        <p class="titulacao">Bacharelado em Ciências da Computação</p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="projetos">
+                <div class="section-heading">
+                    <p class="eyebrow">Portfólio</p>
+                    <h2><i class="fa-solid fa-trowel-bricks"></i> Projetos</h2>
+                </div>
+
+                <div id="projeto-container">
+                    <a href="https://monteiro1000.github.io/projeto-cordel/" class="redirecionar" target="_blank">
+                        <div class="projeto">
+                            <img src="imagens/projeto-02-cordel.jpg" alt="Projeto Cordel" class="foto">
+                            <div class="projeto-info">
+                                <p class="periodo">2024</p>
+                                <h3 class="titulo">Projeto Cordel</h3>
+                                <p>Site construído para explorar o efeito paralax e destacar a cultura nordestina em uma apresentação visual mais fluida.</p>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>Projeto desenvolvido enquanto estudava animações e efeitos visuais, com forte relação com a identidade cultural da região.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://arborizacaointeligenteport-csdn.vercel.app/" class="redirecionar" target="_blank">
+                        <div class="projeto">
+                            <img src="imagens/salvando-a-terra-com-tecnologia-artificial 2.png" alt="Projeto Arborização Inteligente" class="foto">
+                            <div class="projeto-info">
+                                <p class="periodo">2025</p>
+                                <h3 class="titulo">Projeto Arborização Inteligente</h3>
+                                <p>Aplicação voltada para conscientização ambiental e denúncia de áreas com problemas de arborização e degradação urbana.</p>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>Esse projeto foi criado para unir tecnologia, educação e consciência ambiental, com a proposta de transformar informação em ação coletiva.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://sertaonaarte.com.br" class="redirecionar" target="_blank">
+                        <div class="projeto">
+                            <img src="imagens/design_sertao_na_arte.png" alt="Projeto Sertão na Arte" class="foto">
+                            <div class="projeto-info">
+                                <p class="periodo">2026</p>
+                                <h3 class="titulo">Projeto Sertão na Arte</h3>
+                                <p>Website criado para fortalecer a identidade cultural da associação, destacando eventos e ações voltadas à arte e à cultura regional.</p>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>O projeto reforça a presença digital da associação, ampliando o alcance de sua comunicação e valorizando o cenário cultural do sertão sergipano.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://lidera-nord.vercel.app" class="redirecionar" target="_blank">
+                        <div class="projeto">
+                            <img src="imagens/1cae504c7314bec6020c34f9826af02c.png" alt="Projeto Lidera Nordeste" class="foto">
+                            <div class="projeto-info">
+                                <p class="periodo">2026</p>
+                                <h3 class="titulo">Lidera Nordeste</h3>
+                                <p>Projeto de comunicação e apresentação institucional voltado a conectar oportunidades acadêmicas e desenvolvimento de jovens da região Nordeste.</p>
+                                <details class="descricao">
+                                    <summary>Saiba mais...</summary>
+                                    <p>A proposta central é ampliar o acesso a oportunidades e estimular o protagonismo juvenil por meio de educação, formação e ação coletiva.</p>
+                                </details>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <article id="contato">
+                <div class="section-heading">
+                    <p class="eyebrow">Contato</p>
+                    <h2><i class="fa-solid fa-paper-plane"></i> Vamos construir algo relevante?</h2>
+                </div>
+                <div class="contact-card">
+                    <p>Estou aberto a oportunidades em desenvolvimento web, projetos colaborativos, estágio e parcerias que unam tecnologia, experiência e impacto.</p>
+                    <div class="hero__actions">
+                        <a href="https://www.linkedin.com/in/júlio-monteiro-298745304/" target="_blank" class="btn btn-primary">Conectar no LinkedIn</a>
+                        <a href="#ficha" class="btn btn-secondary">Voltar ao topo</a>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer>
-        © 2026 Júlio Monteiro — Desenvolvido com propósito.
+        Portfólio desenvolvido por <strong>Júlio Monteiro</strong> em 2026
     </footer>
 
     <script src="scripts/script.js"></script>

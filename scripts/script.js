@@ -23,10 +23,9 @@ botao.addEventListener('click', () => {
 });
 
 // Scroll suave para links de navegação
-const navLinks = document.querySelectorAll('#menu a.link');
+const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
-    if (this.id === 'botao-tema') return;
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
