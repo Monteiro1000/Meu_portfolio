@@ -438,9 +438,10 @@ export const content: PortfolioContent = {
         description:
           'Aplicativo baseado na escala SRI, de inovação social, pensado para apoiar a análise e a evolução de iniciativas com impacto coletivo.',
         tags: ['React', 'TypeScript'],
-        coverImage: '',
+        coverImage: '/assets/projetos/radar-social.webp',
+        image: '/assets/projetos/radar-social.webp',
         imageAlt:
-          'Representação visual do aplicativo Radar Social baseado na escala SRI de inovação social',
+          'Logo do projeto Radar Social nas cores roxo, laranja e amarelo',
         placeholderType: 'radar-social',
         demoUrl: 'https://www.radarsocial.org/landing-page/quem-somos',
         githubUrl: 'https://github.com/Monteiro1000',
