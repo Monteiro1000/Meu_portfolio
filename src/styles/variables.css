@@ -1,0 +1,54 @@
+:root {
+  /* Color Palette - Light Theme (Paper / Off-white) */
+  --bg-light: #F4F1EC;
+  --bg-card: #FBFAF8;
+  --bg-chip: #F4F1EC;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --text-muted: #595959;
+
+  /* Brand Purples */
+  --purple-action: #4A2C82;
+  --purple-action-hover: #3B216B;
+  --purple-accent: #4B0096;
+  --purple-light-on-dark: #B992FF;
+
+  /* Dark Section Palette (#141414) */
+  --bg-dark: #141414;
+  --bg-dark-elevated: #1C1C1C;
+  --bg-dark-input: #1A1A1A;
+  --text-dark-section: #F7F3EA;
+  --text-dark-muted: #B5B0A6;
+  --text-cream: #FFFDEB;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(26, 26, 26, 0.12);
+  --border-card: rgba(26, 26, 26, 0.16);
+  --border-card-hover: rgba(74, 44, 130, 0.45);
+  --border-chip: rgba(26, 26, 26, 0.22);
+  --border-dark-subtle: rgba(247, 243, 234, 0.14);
+  --border-dark-input: rgba(247, 243, 234, 0.22);
+
+  /* Typography */
+  --font-heading: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Anton', Impact, sans-serif;
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --navbar-height: 76px;
+  --section-pad-y: clamp(4.5rem, 8vw, 7rem);
+
+  /* Radii & Shadows */
+  --radius-card: 8px;
+  --radius-btn: 6px;
+  --radius-chip: 5px;
+  --shadow-card: 2px 3px 0px rgba(26, 26, 26, 0.06), 0 8px 24px rgba(26, 26, 26, 0.03);
+  --shadow-card-hover: 3px 4px 0px rgba(74, 44, 130, 0.16), 0 12px 28px rgba(26, 26, 26, 0.07);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 180ms var(--ease-out);
+  --transition-base: 300ms var(--ease-out);
+}

@@ -1,0 +1,116 @@
+.section {
+  padding-block: var(--section-pad-y);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.leftCol {
+  max-width: 460px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 4.6vw, 3.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-top: 0.85rem;
+  margin-bottom: 1.1rem;
+}
+
+.titleLine {
+  display: block;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.rightCol {
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+/* Vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 6px;
+  width: 2px;
+  background-color: rgba(74, 44, 130, 0.24);
+}
+
+.timelineItem {
+  position: relative;
+}
+
+/* Purple square marker on timeline */
+.marker {
+  position: absolute;
+  left: -2.25rem;
+  top: 1.35rem;
+  width: 14px;
+  height: 14px;
+  background-color: var(--purple-action);
+  border: 2px solid var(--bg-light);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.timelineCard {
+  padding: 1.4rem 1.55rem;
+}
+
+.itemCategory {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--purple-accent);
+  margin-bottom: 0.35rem;
+}
+
+.itemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.28rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.45rem;
+}
+
+.itemDescription {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 4rem;
+  }
+
+  .leftCol {
+    position: sticky;
+    top: calc(var(--navbar-height) + 2.5rem);
+  }
+}

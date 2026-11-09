@@ -1,0 +1,143 @@
+.section {
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  position: relative;
+}
+
+.eyebrowBar {
+  margin-bottom: 1.25rem;
+}
+
+.fullBleedStage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--purple-accent);
+}
+
+.sidePhotoLeft,
+.sidePhotoRight {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* On mobile, stack photo above the full-width purple column */
+.sidePhotoLeft {
+  height: 300px;
+}
+
+.sidePhotoRight {
+  display: none;
+}
+
+.sideImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: saturate(0.95) contrast(1.03);
+}
+
+.photoVignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 10, 40, 0.12) 0%,
+    rgba(75, 0, 150, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.centerColumn {
+  position: relative;
+  z-index: 2;
+  background-color: var(--purple-accent);
+  width: 100%;
+  padding: 2.5rem var(--container-pad) 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.displayTitleWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.displayTitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.8rem, 15vw, 9.6rem);
+  line-height: 0.92;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: var(--text-cream);
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 8px 28px rgba(15, 4, 32, 0.38);
+}
+
+.copyContainer {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.08vw, 1.05rem);
+  line-height: 1.72;
+  color: var(--text-cream);
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (min-width: 900px) {
+  .fullBleedStage {
+    display: grid;
+    grid-template-columns: 1fr minmax(460px, 600px) 1fr;
+    min-height: 620px;
+    align-items: stretch;
+  }
+
+  .sidePhotoLeft,
+  .sidePhotoRight {
+    display: block;
+    height: auto;
+    min-height: 620px;
+  }
+
+  .photoVignette {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 8, 34, 0.18) 0%,
+      rgba(16, 8, 34, 0.28) 100%
+    );
+  }
+
+  .centerColumn {
+    padding: 3.75rem 3.25rem 4.25rem;
+    justify-content: center;
+    overflow: visible;
+    box-shadow: 0 0 60px rgba(15, 0, 36, 0.45);
+  }
+
+  .displayTitleWrap {
+    /* Allow the giant condensed title to overflow horizontally over both side photos */
+    width: 160%;
+    margin-bottom: 2.25rem;
+    pointer-events: none;
+  }
+
+  .displayTitle {
+    font-size: clamp(5.5rem, 10.8vw, 9.8rem);
+    letter-spacing: 0.03em;
+  }
+}

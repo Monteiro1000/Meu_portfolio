@@ -1,0 +1,53 @@
+.panelCollapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    grid-template-rows 340ms var(--ease-out),
+    opacity 250ms var(--ease-out),
+    visibility 0s linear 340ms;
+}
+
+.panelCollapseOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    grid-template-rows 400ms var(--ease-out),
+    opacity 320ms var(--ease-out),
+    visibility 0s linear 0s;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.panelContent {
+  padding: 2.5rem 4px 8px;
+  margin-inline: -4px;
+}
+
+.header {
+  max-width: 640px;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-top: 0.7rem;
+  margin-bottom: 0.65rem;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

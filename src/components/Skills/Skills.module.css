@@ -1,0 +1,30 @@
+.section {
+  padding-block: var(--section-pad-y);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header {
+  max-width: 660px;
+  margin-bottom: clamp(2.25rem, 4vw, 3rem);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.15rem, 4.4vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-top: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.titleLine {
+  display: block;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

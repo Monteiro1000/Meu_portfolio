@@ -1,395 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Júlio Monteiro</title>
-    <link rel="stylesheet" href="/estilos/style.css">
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
-    <script src="https://kit.fontawesome.com/6b1def395a.js" crossorigin="anonymous"></script>
-</head>
-<body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Júlio Monteiro. — Desenvolvedor Front-end & UX/UI Designer</title>
+    <meta
+      name="description"
+      content="Portfólio de Júlio Monteiro — Estudante de Ciência da Computação na UFS, Desenvolvedor Front-end e UX/UI Designer. Transformo curiosidade em experiências digitais e projetos inovadores."
+    />
+    <meta name="theme-color" content="#F4F1EC" />
 
-    <header>
-        <nav id="menu">
-            <ul>
-                <li><a href="#video" class="link"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
-                <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
-                <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
-                <li><a href="#" class= "link" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="ficha">
-            <img src="imagens/monteiro-perfil.png.jpeg" alt="Monteiro perfil" class="foto">
-            <h1>Júlio Monteiro</h1>
-            <p>Jovem formado como técnico em Tecnologia da Informação e atualmente formando em Ciências da computação na UFS, focado no âmbito da Engenharia de Software. Atuo como desenvolvedor front-end, focado na criação de interfaces modernas e funcionais, enquanto sigo em constante evolução para me tornar um profissional full-stack e engenheiro de software completo. Desde o ensino médio, atuo como project builder, desenvolvendo projetos tecnológicos e transformando ideias em soluções reais, assim sendo medalhista de ouro em feiras científicas. Tenho como objetivo expandir minhas habilidades, construir soluções de impacto e consolidar uma carreira sólida na área da tecnologia.</p>
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Júlio Monteiro. — Portfólio • Desenvolvimento & Ideias" />
+    <meta
+      property="og:description"
+      content="Estudante de Ciência da Computação | Desenvolvedor Front-end | UX e UI Designer. Transformo curiosidade em experiências digitais e busco criar projetos inovadores que fazem diferença na sociedade."
+    />
+    <meta property="og:image" content="/assets/julio/hero-julio.webp" /> />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Júlio Monteiro. — Desenvolvedor Front-end & UX/UI Designer" />
+    <meta
+      name="twitter:description"
+      content="Transformo curiosidade em experiências digitais e busco criar projetos inovadores que fazem diferença na sociedade."
+    />
 
-            <div id="social">
-                <a href="https://www.linkedin.com/in/júlio-monteiro-298745304/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Monteiro1000" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.youtube.com/@juliomonteiro48" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.instagram.com/juliomonteiro01_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" target="_blank" rel="nofollow"><i class="fa-solid fa-globe"></i></a>
-            </div>
-        </section>
+    <!-- Favicon ("J." roxo) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-
-        <section id="detalhes">
-            <article id="video">
-                <h2><i class="fa-solid fa-handshake"></i> Deixe-me apresentar</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6fe68imk7DI?si=pslC_j4Mv3-Lk2Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </article> <!-- Fim article#video -->
-            
-            <article id="skills">
-                <h2> <i class="fa-solid fa-brain"></i> Minhas skills </h2>
-
-                <div id="skill-container">
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                HTML5
-                            </span>
-                            <span class="porcent">
-                                90%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 90%;"></div>
-                        </div>
-                    </div> <!-- skill 01 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                CSS3 
-                            </span>
-                            <span class="porcent">
-                                80%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 80%;"></div>
-                        </div>
-                    </div> <!-- skill 02 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                JavaScript
-                            </span>
-                            <span class="porcent">
-                                75%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 75%;"></div>
-                        </div>
-                    </div> <!-- skill 03 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                SQLite
-                            </span>
-                            <span class="porcent">
-                                50%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width:50%;"></div>
-                        </div>
-                    </div> <!-- skill 04 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                Python
-                            </span>
-                            <span class="porcent">
-                                80%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 80%;"></div>
-                        </div>
-                    </div> <!-- skill 05 -->
-
-                    
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                React
-                            </span>
-                            <span class="porcent">
-                                75%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width:75%;"></div>
-                        </div>
-                    </div> <!-- skill 06 -->
-
-                    
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                Comunicação
-                            </span>
-                            <span class="porcent">
-                                100%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 100%;"></div>
-                        </div>
-                    </div> <!-- skill 07 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                Trabalho em equipe
-                            </span>
-                            <span class="porcent">
-                                90%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 90%;"></div>
-                        </div>
-                    </div> <!-- skill 08 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                Adaptabilidade
-                            </span>
-                            <span class="porcent">
-                                85%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 85%;"></div>
-                        </div>
-                    </div> <!-- skill 09 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                Pensamento lógico
-                            </span>
-                            <span class="porcent">
-                                75%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 85%;"></div>
-                        </div>
-                    </div> <!-- skill 10 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-person-rays"></i>
-                                liderança
-                            </span>
-                            <span class="porcent">
-                                90%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 90%;"></div>
-                        </div>
-                    </div> <!-- skill 11 -->
-
-                    <div class="item">
-                        <div class="info">
-                            <span class="nome">
-                                <i class="fa-solid fa-code"></i>
-                                Inteligência Artificial
-                            </span>
-                            <span class="porcent">
-                                75%
-                            </span>
-                        </div>
-                        <div class="barra">
-                            <div class="progresso"
-                            style="width: 75%;"></div>
-                        </div> <!-- Skill 12 -->
-                    
-                </div>
-
-
-            </article> <!-- Fim article#skills -->
-
-            <article id="formacao">
-                <h2><i class="fa-solid fa-graduation-cap"></i>
-                Formação</h2>
-
-                
-
-                    
-                <div id="formacao-container">
-
-                    <div class="curso">
-                        <p class="periodo">2024</p>
-                        <h3 class="instituicao"> Senac</h3>
-                        <p class="titulacao">
-                           Marketing em mídias sociais
-                        </p>
-                    </div>
-
-                    <div class="curso">
-                        <p class="periodo">2023 - 2025</p>
-                        <h3 class="instituicao"> Centro de Excelência Manoel Messias Feitosa</h3>
-                        <p class="titulacao">
-                            Ensino médio
-                        </p>
-                    </div>
-
-                    <div class="curso">
-                        <p class="periodo">2025 - 2026</p>
-                        <h3 class="instituicao"> Senac</h3>
-                        <p class="titulacao">
-                            Técnico em tecnologia da informação
-                        </p>
-                    </div>
-
-                    <div class="curso">
-                        <p class="periodo">2026 - 2031</p>
-                        <h3 class="instituicao"> UFS (Universiade Federal de Sergipe)</h3>
-                        <p class="titulacao">
-                            Bacharelado em Ciências da Computação
-                        </p>
-                    </div>
-
-                    
-                </div>
-
-                
-
-            </article> <!-- Fim article#formacao -->
-
-            <article id="projetos">
-                <h2><i class="fa-solid fa-trowel-bricks"></i> Projetos</h2> 
-
-                <div id="projeto-container"> <!-- projeto 01 -->
-                    <a href="https://monteiro1000.github.io/projeto-cordel/" class="redirecionar" target="_blank">
-                        <div class="projeto">
-                            <img src="imagens/projeto-02-cordel.jpg" alt="" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">2024</p>
-                                <h3 class="titulo">
-                                    Projeto Cordel
-                                </h3>
-                                <p>
-                                    Projeto construído para treinar efeito paralax em imagens.
-                                </p>
-                                <details class="descricao">
-                                    <summary>Saiba mais...</summary>
-                                    <p>Projeto feito quando eu estava estudando o efeito paralax, e o cordel surge como cultura do local que vivo, o nordeste.</p>
-                                </details>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- projeto 02 -->
-                    <a href="https://arborizacaointeligenteport-csdn.vercel.app/" class="redirecionar" target="_blank">
-                        <div class="projeto">
-                            <img src="imagens/salvando-a-terra-com-tecnologia-artificial 2.png" alt="" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">2025</p>
-                                <h3 class="titulo">
-                                    Projeto Arborização Inteligente
-                                </h3>
-                                <p>
-                                    Projeto construído para informar a importância da arborização e alertar sobre áreas que sofrem ataques da falha de arborização.
-                                </p>
-                                <details class="descricao">
-                                    <summary>Saiba mais...</summary>
-                                    <p>Esse projeto foi desenvolvido com o intuito de informar e coletar denúncias. Ademais, está sendo desenvolvido um sistema mais complexo por fora, ou seja, esse site é a parte secundária de um projeto maior. Salve a natureza. 🧑‍💻🌱</p>
-                                </details>
-                            </div>
-                        </div>
-                    </a>
-
-                    <div id="projeto-container"> <!-- projeto 03 -->
-                    <a href="https://sertaonaarte.com.br" class="redirecionar" target="_blank">
-                        <div class="projeto">
-                            <img src="imagens/design_sertao_na_arte.png" alt="" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">2026</p>
-                                <h3 class="titulo">
-                                    Projeto Sertao Na Arte
-                                </h3>
-                                <p>
-                                    Projeto construído para a associação cultural Sertão na arte, onde a mesma promove diversos eventos culturais como show de rock, assim promovendo a cultura pouco explorada no sertão do nordeste.
-                                </p>
-                                <details class="descricao">
-                                    <summary>Saiba mais...</summary>
-                                    <p>A Associação Cultural Sertão na Arte , fundada em 01 de fevereiro de 2011 e atuante desde 2010 no município de Nossa Senhora da Glória/SE, consolidou-se como um dos principais agentes de fomento e difusão cultural no sertão sergipano.</p>
-                                </details>
-                            </div>
-                        </div>
-                    </a>
-
-                    <div id="projeto-container"> <!-- projeto 04 -->
-                    <a href="https://lidera-nord.vercel.app"class="redirecionar" target="_blank">
-                        <div class="projeto">
-                            <img src="imagens/1cae504c7314bec6020c34f9826af02c.png" alt="" class="foto">
-                            <div class="projeto-info">
-                                <p class="periodo">2026</p>
-                                <h3 class="titulo">
-                                    Lidera Nordeste
-                                </h3>
-                                <p>
-                                    O site foi feito para trazer uma visão geral do projeto Lidera Nordeste, o qual traz diversas oportunidades acadêmicas para jovens de todo o Nordeste, as oportunidades variam de internacionais como também nacionais. O Lidera Nordeste é mais do que um projeto, além de receber a premiação dos jovens visionários, levam para os seus mentorados diversas habilidades para construções de projeto que trazem como resolver problemas com o poder da educação.
-                                </p>
-                                <details class="descricao">
-                                    <summary>Saiba mais...</summary>
-                                    <p>O Lidera Nordeste é uma organização social fundada em 2022 que já impactou mais de 4.000 pessoas, formada por jovens nordestinos com o propósito de promover mudanças significativas na realidade socioeducativa da região Nordeste do Brasil. A organização atua oferecendo apoio e ferramentas a crianças e jovens — especialmente aqueles oriundos de escolas públicas e contextos de baixa renda — para que possam superar barreiras impostas por desigualdades educacionais e sociais. O foco do Lidera Nordeste é proporcionar oportunidades que estimulem o desenvolvimento acadêmico, pessoal e profissional desses jovens, capacitando-os a construir um futuro com mais possibilidades e menos limitações estruturais.</p>
-                                </details>
-                            </div>
-                        </div>
-                    </a>
-                    
-                </div>
-            </article> <!-- Fim article#projetos -->
-        </section>
-    </main>
-
-    <footer>
-        Portfólio desenvolvido por <strong>Júlio Monteiro</strong> em 2026
-    </footer>
-
-    <script src="scripts/script.js"></script>
-</body>
+    <!-- Google Fonts: Inter, Inter Tight (800/900) & Anton -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -1,0 +1,219 @@
+.selectorWrap {
+  width: 100%;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.profileCard {
+  width: 100%;
+  text-align: left;
+  padding: clamp(1.5rem, 3vw, 2.1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.35rem;
+  cursor: pointer;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-card);
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.profileCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.profileCard:focus-visible {
+  outline: 2px solid var(--purple-action);
+  outline-offset: 3px;
+}
+
+.profileCardSelected {
+  border-color: var(--purple-action);
+  background-color: #FDFCFB;
+  transform: translateY(-3px);
+  box-shadow:
+    3px 5px 0px rgba(74, 44, 130, 0.22),
+    0 14px 32px rgba(74, 44, 130, 0.09);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: rgba(74, 44, 130, 0.08);
+  border: 1px solid rgba(74, 44, 130, 0.2);
+  color: var(--purple-action);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.iconBoxSelected {
+  background-color: var(--purple-action);
+  border-color: var(--purple-action);
+  color: #FFFFFF;
+}
+
+.badgesWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.secondaryLabel {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--purple-accent);
+  background-color: rgba(74, 44, 130, 0.08);
+  border: 1px solid rgba(74, 44, 130, 0.22);
+  padding: 0.28rem 0.62rem;
+  border-radius: 5px;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(26, 26, 26, 0.28);
+  background-color: transparent;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.statusDotActive {
+  background-color: var(--purple-action);
+  border-color: var(--purple-action);
+  box-shadow: 0 0 0 4px rgba(74, 44, 130, 0.16);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2.2vw, 1.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text-primary);
+}
+
+.cardDescription {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.58;
+  max-width: 46ch;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+.ctaText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--purple-action);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.profileCard:hover .ctaText {
+  transform: translateX(3px);
+}
+
+.ctaTextSelected {
+  color: var(--purple-accent);
+}
+
+.selectedPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background-color: var(--purple-action);
+  padding: 0.22rem 0.58rem;
+  border-radius: 999px;
+}
+
+.selectedPillDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.hintText {
+  margin-top: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-btn);
+  background-color: rgba(26, 26, 26, 0.03);
+  border: 1px dashed var(--border-card);
+}
+
+.hintIndicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--purple-action);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}

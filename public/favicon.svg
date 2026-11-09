@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="J.">
+  <rect width="64" height="64" rx="12" fill="#F4F1EC" />
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="none" stroke="#4A2C82" stroke-width="2" stroke-opacity="0.25" />
+  <text
+    x="14"
+    y="47"
+    font-family="'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif"
+    font-weight="900"
+    font-size="42"
+    letter-spacing="-2"
+    fill="#1A1A1A"
+  >J</text>
+  <rect x="40" y="37" width="10" height="10" fill="#4B0096" />
+</svg>

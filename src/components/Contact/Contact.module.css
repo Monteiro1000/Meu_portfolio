@@ -1,0 +1,227 @@
+.section {
+  background-color: var(--bg-dark);
+  color: var(--text-dark-section);
+  padding-top: var(--section-pad-y);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.leftCol {
+  max-width: 540px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 4.6vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text-cream);
+  margin-top: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+.description {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  color: var(--text-dark-muted);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.directActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryMailBtn {
+  padding: 0.82rem 1.45rem;
+  font-size: 0.92rem;
+}
+
+.rightCol {
+  width: 100%;
+}
+
+.contactCard {
+  background-color: var(--bg-dark-elevated);
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-card);
+  padding: clamp(1.6rem, 3.5vw, 2.35rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-cream);
+}
+
+.cardSubtitle {
+  font-size: 0.92rem;
+  color: var(--text-dark-muted);
+  line-height: 1.5;
+}
+
+.emailBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--bg-dark-input);
+  border: 1px solid var(--border-dark-input);
+  border-radius: var(--radius-btn);
+  padding: 0.85rem 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.emailBox:hover {
+  border-color: var(--purple-light-on-dark);
+}
+
+.emailTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.emailLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--purple-light-on-dark);
+}
+
+.emailAddress {
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  font-weight: 600;
+  color: var(--text-cream);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.emailAddress:hover {
+  color: var(--purple-light-on-dark);
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-cream);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-dark-input);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.copyBtn:hover {
+  background-color: var(--purple-action);
+  border-color: var(--purple-action);
+  color: #FFFFFF;
+}
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-dark-subtle);
+}
+
+.socialSectionLabel {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-dark-muted);
+}
+
+.socialList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark-section);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-dark-input);
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.socialBtn:hover {
+  border-color: var(--purple-light-on-dark);
+  background-color: rgba(185, 146, 255, 0.08);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.socialBtnText {
+  flex-grow: 1;
+}
+
+.arrowIcon {
+  color: var(--text-dark-muted);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.socialBtn:hover .arrowIcon {
+  color: var(--purple-light-on-dark);
+  transform: translate(2px, -2px);
+}
+
+@media (min-width: 540px) {
+  .socialList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 4rem;
+  }
+}

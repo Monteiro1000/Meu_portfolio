@@ -1,0 +1,93 @@
+.panelCollapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    grid-template-rows 340ms var(--ease-out),
+    opacity 250ms var(--ease-out),
+    visibility 0s linear 340ms;
+}
+
+.panelCollapseOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    grid-template-rows 380ms var(--ease-out),
+    opacity 320ms var(--ease-out),
+    visibility 0s linear 0s;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.panelContent {
+  padding: 2.25rem 4px 8px;
+  margin-inline: -4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+}
+
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background-color: rgba(74, 44, 130, 0.08);
+  border: 1px solid rgba(74, 44, 130, 0.18);
+  color: var(--purple-action);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ctaRow {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.35rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+  }
+}
