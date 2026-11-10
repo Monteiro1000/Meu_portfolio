@@ -4,10 +4,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition:
-    grid-template-rows 340ms var(--ease-out),
-    opacity 250ms var(--ease-out),
-    visibility 0s linear 340ms;
+  scroll-margin-top: var(--navbar-height);
 }
 
 .panelCollapseOpen {

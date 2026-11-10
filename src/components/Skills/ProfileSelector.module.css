@@ -213,30 +213,6 @@
   color: #FFFFFF;
 }
 
-.selectedPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #FFFFFF;
-  background-color: #7E22CE;
-  border: 1px solid rgba(214, 188, 250, 0.45);
-  padding: 0.24rem 0.65rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 8px rgba(126, 34, 206, 0.4);
-}
-
-.selectedPillDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #9BF0B4;
-  box-shadow: 0 0 6px #9BF0B4;
-}
-
 .hintText {
   margin-top: 1.4rem;
   display: flex;

@@ -18,8 +18,28 @@ export function ProfileSelector({
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const handleCardClick = (profileId: ProfileId) => {
+    const isOpening = activeProfile !== profileId;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const beforeTop = wrapperRef.current?.getBoundingClientRect().top;
+
     onToggleProfile(profileId);
+
+    if (isOpening && isMobile) {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          const panelEl = document.getElementById(`panel-${profileId}`);
+          if (!panelEl) return;
+          const prefersReducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+          ).matches;
+          panelEl.scrollIntoView({
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            block: 'start',
+          });
+        });
+      });
+      return;
+    }
 
     if (beforeTop !== undefined) {
       window.requestAnimationFrame(() => {
@@ -122,13 +142,6 @@ export function ProfileSelector({
                     <span>{profile.ctaLabel}</span>
                     <span className={styles.ctaArrow} aria-hidden="true">→</span>
                   </span>
-
-                  {isSelected && (
-                    <span className={styles.selectedPill}>
-                      <span className={styles.selectedPillDot} aria-hidden="true" />
-                      Ativo
-                    </span>
-                  )}
                 </div>
               </div>
             </button>
