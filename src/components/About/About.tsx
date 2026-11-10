@@ -1,7 +1,8 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './About.module.css';
 
 export function About() {
+  const { content } = useLanguage();
   const { about } = content;
 
   return (

@@ -1,4 +1,4 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { useProfile } from '../../hooks/useProfile';
 import { ProfileSelector } from './ProfileSelector';
 import { DeveloperPanel } from './DeveloperPanel';
@@ -6,6 +6,7 @@ import { DesignerPanel } from './DesignerPanel';
 import styles from './Skills.module.css';
 
 export function Skills() {
+  const { content } = useLanguage();
   const { skills } = content;
   const { activeProfile, toggleProfile } = useProfile();
 

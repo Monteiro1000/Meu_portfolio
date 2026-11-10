@@ -7,6 +7,10 @@
   --text-secondary: #6B6B6B;
   --text-muted: #595959;
 
+  /* Navbar backgrounds */
+  --navbar-bg: rgba(244, 241, 236, 0.92);
+  --navbar-bg-scrolled: rgba(244, 241, 236, 0.97);
+
   /* Brand Purples */
   --purple-action: #4A2C82;
   --purple-action-hover: #3B216B;
@@ -51,4 +55,39 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --transition-fast: 180ms var(--ease-out);
   --transition-base: 300ms var(--ease-out);
+}
+
+[data-theme='dark'] {
+  /* Color Palette - Dark Theme */
+  --bg-light: #0D0B14;
+  --bg-card: #151122;
+  --bg-chip: #1F1932;
+  --text-primary: #F7F3EA;
+  --text-secondary: #BDB7CA;
+  --text-muted: #8E879C;
+
+  /* Navbar backgrounds */
+  --navbar-bg: rgba(13, 11, 20, 0.92);
+  --navbar-bg-scrolled: rgba(13, 11, 20, 0.98);
+
+  /* Brand Purples on Dark */
+  --purple-action: #7E22CE;
+  --purple-action-hover: #9333EA;
+  --purple-accent: #B992FF;
+  --purple-light-on-dark: #C4B5FD;
+
+  /* Dark Section Palette on Dark */
+  --bg-dark: #09080E;
+  --bg-dark-elevated: #130F1F;
+  --bg-dark-input: #100C1B;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(247, 243, 234, 0.12);
+  --border-card: rgba(168, 85, 247, 0.22);
+  --border-card-hover: rgba(192, 132, 252, 0.6);
+  --border-chip: rgba(168, 85, 247, 0.32);
+
+  /* Shadows */
+  --shadow-card: 2px 3px 0px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 3px 4px 0px rgba(126, 34, 206, 0.35), 0 14px 32px rgba(0, 0, 0, 0.55);
 }

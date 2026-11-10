@@ -1,8 +1,9 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { useProfile } from '../../hooks/useProfile';
 import styles from './Footer.module.css';
 
 export function Footer() {
+  const { content } = useLanguage();
   const { footer, meta } = content;
   const { navigateToProjects } = useProfile();
 

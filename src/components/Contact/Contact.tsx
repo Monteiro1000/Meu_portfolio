@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { content, SocialChannel } from '../../data/content';
+import type { SocialChannel } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Contact.module.css';
 
 function SocialIcon({ id }: { id: SocialChannel['id'] }) {
@@ -77,6 +78,7 @@ function SocialIcon({ id }: { id: SocialChannel['id'] }) {
 }
 
 export function Contact() {
+  const { content } = useLanguage();
   const { contact } = content;
   const [copied, setCopied] = useState(false);
 

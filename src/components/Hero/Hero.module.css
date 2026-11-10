@@ -9,11 +9,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  align-items: end;
+  align-items: center;
 }
 
 .textColumn {
-  padding-bottom: clamp(2.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
   max-width: 680px;
 }
 
@@ -83,8 +83,9 @@
 .photoColumn {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
+  align-self: center;
 }
 
 .photoWrapper {
@@ -92,38 +93,37 @@
   width: min(100%, 420px);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  /* Slight overlap below the hero bottom line as in prototype */
-  margin-bottom: -22px;
+  align-items: center;
+  margin-bottom: 0;
   z-index: 3;
 }
 
 .heroImage {
   width: 100%;
   height: auto;
-  max-height: 620px;
+  max-height: 560px;
   object-fit: contain;
-  object-position: bottom center;
-  filter: drop-shadow(0 18px 34px rgba(20, 14, 36, 0.16));
+  filter: drop-shadow(0 14px 28px rgba(20, 14, 36, 0.16));
 }
 
 @media (min-width: 900px) {
   .grid {
-    grid-template-columns: 1.22fr 0.88fr;
-    gap: 2rem;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 2.5rem;
+    align-items: center;
   }
 
   .photoColumn {
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .photoWrapper {
     width: 100%;
-    max-width: 470px;
-    margin-bottom: -28px;
+    max-width: 480px;
+    margin-bottom: 0;
   }
 
   .heroImage {
-    max-height: 650px;
+    max-height: 590px;
   }
 }

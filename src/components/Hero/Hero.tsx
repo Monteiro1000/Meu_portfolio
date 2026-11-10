@@ -1,8 +1,9 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { useProfile } from '../../hooks/useProfile';
 import styles from './Hero.module.css';
 
 export function Hero() {
+  const { content } = useLanguage();
   const { hero } = content;
   const { navigateToProjects } = useProfile();
 
@@ -36,54 +37,28 @@ export function Hero() {
               {hero.primaryCta.label}
             </a>
 
-            {hero.secondaryCta.href.trim() ? (
-              <a
-                href={hero.secondaryCta.href}
-                className="btn btn--secondary"
-                download
+            <a
+              href="/portfolio-julio-monteiro.pdf"
+              download="portfolio-julio-monteiro.pdf"
+              className="btn btn--secondary"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                <span>{hero.secondaryCta.label}</span>
-              </a>
-            ) : (
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="btn btn--secondary btn--disabled"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                <span>{hero.secondaryCta.label}</span>
-              </button>
-            )}
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>{hero.secondaryCta.label}</span>
+            </a>
           </div>
 
           {hero.resumeNote && (

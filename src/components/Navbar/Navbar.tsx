@@ -1,16 +1,65 @@
 import { useState, useEffect, type MouseEvent } from 'react';
-import { content, type NavItem } from '../../data/content';
+import type { NavItem } from '../../data/content';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { useProfile } from '../../hooks/useProfile';
+import { useTheme } from '../../context/ThemeContext';
+import { useLanguage } from '../../context/LanguageContext';
+import type { SupportedLang } from '../../data/translations';
 import styles from './Navbar.module.css';
 
-const sectionIds = content.navbar.items.map((item) => item.id);
+function SunIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  );
+}
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const activeId = useActiveSection(sectionIds);
+  const { theme, toggleTheme } = useTheme();
+  const { lang, setLang, content } = useLanguage();
   const { navigateToProjects } = useProfile();
+
+  const sectionIds = content.navbar.items.map((item) => item.id);
+  const activeId = useActiveSection(sectionIds);
 
   useEffect(() => {
     const onScroll = () => {
@@ -44,6 +93,19 @@ export function Navbar() {
       navigateToProjects(e);
     }
   };
+
+  const themeLabel =
+    lang === 'pt'
+      ? theme === 'dark'
+        ? 'Ativar modo claro'
+        : 'Ativar modo escuro'
+      : lang === 'es'
+      ? theme === 'dark'
+        ? 'Activar modo claro'
+        : 'Activar modo oscuro'
+      : theme === 'dark'
+      ? 'Switch to light mode'
+      : 'Switch to dark mode';
 
   return (
     <header
@@ -83,6 +145,39 @@ export function Navbar() {
         </nav>
 
         <div className={styles.actions}>
+          {/* Language selector (Desktop) */}
+          <div
+            className={styles.langSelector}
+            role="group"
+            aria-label="Selecionar idioma / Language"
+          >
+            {(['pt', 'en', 'es'] as SupportedLang[]).map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setLang(l)}
+                className={`${styles.langBtn} ${
+                  lang === l ? styles.langBtnActive : ''
+                }`}
+                aria-pressed={lang === l}
+                aria-label={`Idioma ${l.toUpperCase()}`}
+              >
+                {l.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
+          {/* Theme toggle button (Desktop) */}
+          <button
+            type="button"
+            className={styles.themeToggleBtn}
+            onClick={toggleTheme}
+            aria-label={themeLabel}
+            title={themeLabel}
+          >
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+
           <a
             href={content.navbar.ctaHref}
             className={`btn btn--primary ${styles.ctaBtn}`}
@@ -96,7 +191,11 @@ export function Navbar() {
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-panel"
-            aria-label={menuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+            aria-label={
+              menuOpen
+                ? 'Fechar menu de navegação'
+                : 'Abrir menu de navegação'
+            }
           >
             <span
               className={`${styles.hamburgerBar} ${
@@ -145,6 +244,69 @@ export function Navbar() {
               );
             })}
           </ul>
+
+          {/* Mobile Preferences (Theme + Lang) */}
+          <div className={styles.mobilePreferences}>
+            <div className={styles.mobilePrefRow}>
+              <span className={styles.mobilePrefLabel}>
+                {lang === 'pt'
+                  ? 'Idioma'
+                  : lang === 'es'
+                  ? 'Idioma'
+                  : 'Language'}
+                :
+              </span>
+              <div
+                className={styles.mobileLangGroup}
+                role="group"
+                aria-label="Selecionar idioma"
+              >
+                {(['pt', 'en', 'es'] as SupportedLang[]).map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => setLang(l)}
+                    className={`${styles.langBtn} ${styles.mobileLangBtn} ${
+                      lang === l ? styles.langBtnActive : ''
+                    }`}
+                    aria-pressed={lang === l}
+                    tabIndex={menuOpen ? 0 : -1}
+                  >
+                    {l.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.mobilePrefRow}>
+              <span className={styles.mobilePrefLabel}>
+                {lang === 'pt' ? 'Tema' : lang === 'es' ? 'Tema' : 'Theme'}:
+              </span>
+              <button
+                type="button"
+                className={styles.mobileThemeBtn}
+                onClick={toggleTheme}
+                tabIndex={menuOpen ? 0 : -1}
+                aria-label={themeLabel}
+              >
+                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+                <span>
+                  {theme === 'dark'
+                    ? lang === 'pt'
+                      ? 'Modo Claro'
+                      : lang === 'es'
+                      ? 'Modo Claro'
+                      : 'Light Mode'
+                    : lang === 'pt'
+                    ? 'Modo Escuro'
+                    : lang === 'es'
+                    ? 'Modo Oscuro'
+                    : 'Dark Mode'}
+                </span>
+              </button>
+            </div>
+          </div>
+
           <a
             href={content.navbar.ctaHref}
             className={`btn btn--primary ${styles.mobileCta}`}

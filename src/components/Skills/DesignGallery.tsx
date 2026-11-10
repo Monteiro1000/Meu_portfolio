@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { Lightbox } from './Lightbox';
 import styles from './DesignGallery.module.css';
 
@@ -8,6 +8,7 @@ interface DesignGalleryProps {
 }
 
 export function DesignGallery({ isPanelOpen }: DesignGalleryProps) {
+  const { content } = useLanguage();
   const { designs } = content;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);

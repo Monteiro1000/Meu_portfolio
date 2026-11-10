@@ -1,7 +1,8 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Education.module.css';
 
 export function Education() {
+  const { content } = useLanguage();
   const { education } = content;
 
   return (

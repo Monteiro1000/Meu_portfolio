@@ -1,4 +1,4 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './InstagramCards.module.css';
 
 interface InstagramCardsProps {
@@ -26,6 +26,7 @@ function InstagramIcon() {
 }
 
 export function InstagramCards({ isPanelOpen }: InstagramCardsProps) {
+  const { content } = useLanguage();
   const { instagramProfiles, skills } = content;
   const { instagramSection } = skills.designerPanel;
 

@@ -1,4 +1,5 @@
-import { content, type SkillCategory } from '../../data/content';
+import type { SkillCategory } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { useProfile } from '../../hooks/useProfile';
 import styles from './DeveloperPanel.module.css';
 
@@ -85,6 +86,7 @@ function CategoryIcon({ type }: { type: SkillCategory['icon'] }) {
 }
 
 export function DeveloperPanel({ isOpen }: DeveloperPanelProps) {
+  const { content } = useLanguage();
   const { skills } = content;
   const { navigateToProjects } = useProfile();
 

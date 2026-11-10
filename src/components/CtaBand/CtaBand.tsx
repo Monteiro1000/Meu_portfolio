@@ -1,7 +1,8 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './CtaBand.module.css';
 
 export function CtaBand() {
+  const { content } = useLanguage();
   const { ctaBand } = content;
 
   return (

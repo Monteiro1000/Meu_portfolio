@@ -223,3 +223,25 @@ ol {
     transform: none;
   }
 }
+
+/* Print Styles */
+@media print {
+  body::before {
+    display: none !important;
+  }
+
+  header {
+    position: static !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .btn {
+    box-shadow: none !important;
+  }
+}

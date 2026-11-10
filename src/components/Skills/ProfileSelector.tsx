@@ -1,5 +1,6 @@
 import { useRef, type KeyboardEvent } from 'react';
-import { content, type ProfileId } from '../../data/content';
+import type { ProfileId } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './ProfileSelector.module.css';
 
 interface ProfileSelectorProps {
@@ -11,6 +12,7 @@ export function ProfileSelector({
   activeProfile,
   onToggleProfile,
 }: ProfileSelectorProps) {
+  const { content } = useLanguage();
   const { profiles, skills } = content;
   const wrapperRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);

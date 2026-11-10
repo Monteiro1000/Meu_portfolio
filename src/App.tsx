@@ -8,6 +8,8 @@ import { Education } from './components/Education/Education';
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { ProfileProvider, useProfile } from './hooks/useProfile';
+import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
 import { useReveal } from './hooks/useReveal';
 
 function PortfolioPage() {
@@ -37,8 +39,12 @@ function PortfolioPage() {
 
 export function App() {
   return (
-    <ProfileProvider>
-      <PortfolioPage />
-    </ProfileProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <ProfileProvider>
+          <PortfolioPage />
+        </ProfileProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }

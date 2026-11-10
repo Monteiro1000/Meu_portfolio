@@ -1,4 +1,5 @@
-import { content, ProjectItem } from '../../data/content';
+import type { ProjectItem } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Projects.module.css';
 
 function ProjectVisual({ project }: { project: ProjectItem }) {
@@ -216,6 +217,7 @@ function ProjectVisual({ project }: { project: ProjectItem }) {
 }
 
 export function Projects() {
+  const { content } = useLanguage();
   const { projects } = content;
 
   return (

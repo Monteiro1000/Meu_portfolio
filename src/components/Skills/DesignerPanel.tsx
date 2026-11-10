@@ -1,4 +1,4 @@
-import { content } from '../../data/content';
+import { useLanguage } from '../../context/LanguageContext';
 import { DesignGallery } from './DesignGallery';
 import { InstagramCards } from './InstagramCards';
 import styles from './DesignerPanel.module.css';
@@ -8,6 +8,7 @@ interface DesignerPanelProps {
 }
 
 export function DesignerPanel({ isOpen }: DesignerPanelProps) {
+  const { content } = useLanguage();
   const { designerPanel } = content.skills;
 
   return (
