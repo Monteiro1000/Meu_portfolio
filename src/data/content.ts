@@ -332,23 +332,22 @@ export const content: PortfolioContent = {
 
   /**
    * Perfis de Instagram gerenciados por Júlio.
-   * TODO: Preencher `name`, `handle`, `description`, `url` e `image` de cada perfil real.
    */
   instagramProfiles: [
     {
       id: 'instagram-01',
-      name: 'Perfil a adicionar',
-      handle: '@perfil-a-adicionar',
-      description: 'Gestão de conteúdo e identidade visual.',
-      url: '',
+      name: 'Vôlei Carcará Glória',
+      handle: '@voleigloriaofc',
+      description: 'Gestão de conteúdo, artes de jogos e identidade visual esportiva.',
+      url: 'https://www.instagram.com/voleigloriaofc/',
       image: '',
     },
     {
       id: 'instagram-02',
-      name: 'Perfil a adicionar',
-      handle: '@perfil-a-adicionar',
-      description: 'Planejamento de postagens e direção criativa para redes sociais.',
-      url: '',
+      name: 'Saltando para o Futuro',
+      handle: '@saltandopara_o_futuro',
+      description: 'Planejamento de postagens, divulgação de eventos e direção criativa para redes sociais.',
+      url: 'https://www.instagram.com/saltandopara_o_futuro/',
       image: '',
     },
   ],
@@ -451,8 +450,8 @@ export const content: PortfolioContent = {
         label: 'PROJETO 03',
         title: 'Sertão Na Arte',
         description:
-          'Conceito de solução para inspeção industrial no setor de óleo e gás, com foco em apoiar processos mais seguros e eficientes.',
-        tags: ['Inspeção industrial', 'IA'],
+          'Site desenvolvido para a comunicação institucional da Associação Sertão na Arte, fortalecendo a divulgação de ações e projetos que promovem a cultura.',
+        tags: ['React', 'Comunicação', 'Cultura'],
         coverImage: '/assets/projetos/sertao-na-arte.webp',
         image: '/assets/projetos/sertao-na-arte.webp',
         imageAlt:

@@ -105,10 +105,8 @@
   letter-spacing: 0.08em;
   line-height: 1.35;
   color: var(--purple-action);
-  background-color: rgba(74, 44, 130, 0.09);
-  border: 1px solid rgba(74, 44, 130, 0.24);
-  padding: 0.22rem 0.5rem;
-  border-radius: 4px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .cardTitle {
