@@ -5,45 +5,115 @@
 .cardsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .profileCard {
   width: 100%;
   text-align: left;
-  padding: clamp(1.5rem, 3vw, 2.1rem);
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1.35rem;
+  border-radius: calc(var(--radius-card) + 4px);
   cursor: pointer;
-  background-color: var(--bg-card);
-  border: 1.5px solid var(--border-card);
+  background: linear-gradient(168deg, #1A1329 0%, #110D1B 65%, #0B0813 100%);
+  border: 1.5px solid rgba(168, 85, 247, 0.26);
+  box-shadow: 0 10px 28px rgba(18, 12, 32, 0.4), 0 2px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
   transition:
     transform var(--transition-base),
     border-color var(--transition-base),
     box-shadow var(--transition-base),
-    background-color var(--transition-base);
+    background var(--transition-base);
+}
+
+/* Subtle top-right purple ambient lighting */
+.profileCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle at 85% 15%,
+    rgba(168, 85, 247, 0.18),
+    rgba(112, 36, 209, 0.08) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .profileCard:hover {
-  transform: translateY(-3px);
-  border-color: var(--border-card-hover);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+  border-color: rgba(192, 132, 252, 0.58);
+  box-shadow:
+    0 16px 38px rgba(74, 20, 140, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.65);
 }
 
 .profileCard:focus-visible {
-  outline: 2px solid var(--purple-action);
+  outline: 2px solid var(--purple-light-on-dark);
   outline-offset: 3px;
 }
 
 .profileCardSelected {
-  border-color: var(--purple-action);
-  background-color: #FDFCFB;
-  transform: translateY(-3px);
+  border-color: var(--purple-light-on-dark);
+  background: linear-gradient(168deg, #221838 0%, #151022 65%, #0E0B17 100%);
+  transform: translateY(-4px);
   box-shadow:
-    3px 5px 0px rgba(74, 44, 130, 0.22),
-    0 14px 32px rgba(74, 44, 130, 0.09);
+    0 0 0 1px var(--purple-light-on-dark),
+    0 20px 44px rgba(112, 36, 209, 0.42),
+    0 4px 16px rgba(0, 0, 0, 0.75);
+}
+
+/* Media preview window */
+.mediaWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 8.8;
+  overflow: hidden;
+  position: relative;
+  background-color: #07050A;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 450ms var(--ease-out),
+    filter 450ms var(--ease-out);
+}
+
+.profileCard:hover .cardImage,
+.profileCardSelected .cardImage {
+  transform: scale(1.04);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 11, 22, 0.15) 0%,
+    rgba(14, 11, 22, 0.4) 60%,
+    rgba(14, 11, 22, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+/* Content details */
+.cardContent {
+  padding: clamp(1.35rem, 2.5vw, 1.85rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  position: relative;
+  z-index: 2;
 }
 
 .cardTop {
@@ -51,58 +121,30 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 100%;
 }
 
-.iconBox {
-  width: 52px;
-  height: 52px;
-  border-radius: 10px;
-  background-color: rgba(74, 44, 130, 0.08);
-  border: 1px solid rgba(74, 44, 130, 0.2);
-  color: var(--purple-action);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    border-color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.iconBoxSelected {
-  background-color: var(--purple-action);
-  border-color: var(--purple-action);
-  color: #FFFFFF;
-}
-
-.badgesWrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
+/* Sublinhado sem padding e sem contorno conforme solicitação */
 .secondaryLabel {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.74rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--purple-accent);
-  background-color: rgba(74, 44, 130, 0.08);
-  border: 1px solid rgba(74, 44, 130, 0.22);
-  padding: 0.28rem 0.62rem;
-  border-radius: 5px;
+  letter-spacing: 0.18em;
+  color: #D6BCFA;
+  background: transparent;
+  border: none;
+  padding: 0 0 3px 0;
+  border-bottom: 2px solid #A855F7;
+  border-radius: 0;
+  line-height: 1.3;
 }
 
 .statusDot {
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  border: 1.5px solid rgba(26, 26, 26, 0.28);
+  border: 1.5px solid rgba(214, 188, 250, 0.4);
   background-color: transparent;
   transition:
     background-color var(--transition-fast),
@@ -111,31 +153,30 @@
 }
 
 .statusDotActive {
-  background-color: var(--purple-action);
-  border-color: var(--purple-action);
-  box-shadow: 0 0 0 4px rgba(74, 44, 130, 0.16);
+  background-color: #A855F7;
+  border-color: #D6BCFA;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.28);
 }
 
 .cardBody {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .cardTitle {
   font-family: var(--font-heading);
-  font-size: clamp(1.45rem, 2.2vw, 1.75rem);
+  font-size: clamp(1.5rem, 2.3vw, 1.85rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.12;
-  color: var(--text-primary);
+  color: #FFFDEB;
 }
 
 .cardDescription {
-  font-size: 0.96rem;
-  color: var(--text-secondary);
+  font-size: 0.95rem;
+  color: rgba(247, 243, 234, 0.82);
   line-height: 1.58;
-  max-width: 46ch;
 }
 
 .cardFooter {
@@ -143,8 +184,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
   width: 100%;
 }
 
@@ -152,43 +193,52 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  color: var(--purple-action);
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  color: #D6BCFA;
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
 }
 
-.profileCard:hover .ctaText {
-  transform: translateX(3px);
+.ctaArrow {
+  transition: transform var(--transition-fast);
+}
+
+.profileCard:hover .ctaArrow {
+  transform: translateX(4px);
 }
 
 .ctaTextSelected {
-  color: var(--purple-accent);
+  color: #FFFFFF;
 }
 
 .selectedPill {
   display: inline-flex;
   align-items: center;
-  gap: 0.38rem;
+  gap: 0.4rem;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: #FFFFFF;
-  background-color: var(--purple-action);
-  padding: 0.22rem 0.58rem;
+  background-color: #7E22CE;
+  border: 1px solid rgba(214, 188, 250, 0.45);
+  padding: 0.24rem 0.65rem;
   border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(126, 34, 206, 0.4);
 }
 
 .selectedPillDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #9BF0B4;
+  box-shadow: 0 0 6px #9BF0B4;
 }
 
 .hintText {
-  margin-top: 1.35rem;
+  margin-top: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,15 +247,15 @@
   font-weight: 500;
   color: var(--text-secondary);
   text-align: center;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1.15rem;
   border-radius: var(--radius-btn);
-  background-color: rgba(26, 26, 26, 0.03);
-  border: 1px dashed var(--border-card);
+  background-color: rgba(74, 44, 130, 0.05);
+  border: 1px dashed rgba(74, 44, 130, 0.28);
 }
 
 .hintIndicator {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: var(--purple-action);
   flex-shrink: 0;
@@ -214,6 +264,6 @@
 @media (min-width: 768px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.6rem;
   }
 }

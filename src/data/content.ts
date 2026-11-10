@@ -22,7 +22,8 @@ export interface ProfileOption {
   title: string;
   label: string;
   description: string;
-  icon: 'code' | 'design';
+  image: string;
+  imageAlt: string;
   ctaLabel: string;
 }
 
@@ -261,8 +262,9 @@ export const content: PortfolioContent = {
       title: 'Desenvolvedor',
       label: 'Build Project',
       description: 'Interfaces, sistemas e projetos que saem do papel.',
-      icon: 'code',
-      ctaLabel: 'Explorar →',
+      image: '/assets/profiles/developer-preview.webp',
+      imageAlt: 'Ambiente moderno de desenvolvimento com código em tela escura e interfaces digitais',
+      ctaLabel: 'Explorar',
     },
     {
       id: 'designer',
@@ -270,8 +272,9 @@ export const content: PortfolioContent = {
       title: 'Designer',
       label: 'Visual & Social Media',
       description: 'Identidade visual, interfaces e peças para redes sociais.',
-      icon: 'design',
-      ctaLabel: 'Explorar →',
+      image: '/assets/profiles/designer-preview.webp',
+      imageAlt: 'Interface visual de design com biblioteca de componentes e telas de aplicativos',
+      ctaLabel: 'Explorar',
     },
   ],
 
@@ -353,10 +356,10 @@ export const content: PortfolioContent = {
   ],
 
   skills: {
-    eyebrow: '02 / HABILIDADES',
-    titleLines: ['Ferramentas para tirar', 'ideias do papel.'],
+    eyebrow: '02 / HABILIDADES & ATUAÇÃO',
+    titleLines: ['Desenvolvimento Front-end,', 'UI/UX e criação visual.'],
     subtitle:
-      'Uma base em evolução constante, da construção de interfaces à organização do trabalho em equipe.',
+      'Construção de interfaces modernas, código performático e identidades visuais focadas em experiência e impacto.',
     selectorHint: 'Escolha um perfil para conhecer meu trabalho.',
     developerCta: {
       label: 'Ver projetos →',
